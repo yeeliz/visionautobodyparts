@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Body Parts</title>
+    <link rel="icon" href="myassets/img/icon.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="myassets/img/icon.png" type="image/gif" sizes="18x18">
+    <link rel="icon" href="myassets/img/icon.png" type="image/gif" sizes="20x20">
+
+    <link rel="stylesheet" href="myassets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="myassets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="myassets/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="myassets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="myassets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="myassets/css/nice-select.css">
+    <link rel="stylesheet" href="myassets/css/animate.css">
+    <link rel="stylesheet" href="myassets/css/magnific-popup.css">
+    <link rel="stylesheet" href="myassets/css/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="myassets/css/responsive.css">
+
+    <style>
+        #carYears+.nice-select {
+            width: 100% !important;
+            /* Ajusta según sea necesario */
+
+        }
+
+
+        #carMakes+.nice-select {
+            width: 100% !important;
+            /* Ajusta según sea necesario */
+            margin-bottom: 10px !important;
+        }
+
+        #carModels+.nice-select {
+            width: 100% !important;
+            /* Ajusta según sea necesario */
+            margin-bottom: 10px !important;
+        }
+
+        .custom-bg-border {
+            background-color: #e0dada;
+            /* Un gris claro, ajusta según necesites */
+            border: 1px solid #cccccc;
+            /* Un borde sólido gris, ajusta según necesites */
+            padding: 15px;
+            /* Espacio interior para no pegar el contenido al borde */
+        }
+
+        .product-card {
+            width: 100%;
+            border: 1px solid #e7dbdb;
+            padding: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            height: 190px;
+            border-radius: 10px;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            /* Asegura que la imagen no exceda su contenedor */
+            height: 150px;
+
+        }
+
+        .product-info {
+            padding-left: 15px;
+            /* Agrega un poco de espacio entre la imagen y el texto */
+        }
+
+        .product-info>h6 {
+            padding-top: 15px;
+        }
+
+        .product-price {
+            margin-top: 2px;
+            margin-bottom: 5px;
+            color: #c0392b;
+            font-size: 0.9em;
+        }
+
+        .part-link {
+            color: #0d2c41;
+            margin-top: 2px;
+        }
+
+        .product-price del {
+            margin-top: 3px;
+            color: #7f8c8d;
+        }
+
+        .add-to-cart-btn {
+            background-color: #3498db;
+            color: white;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        
+
+        .main-container {
+            margin-top: 20px !important;
+            border: 1px solid #cccccc;
+            border-radius: 10px;
+            background-color: #fffcfc;
+            padding: 20px;
+            box-shadow: inset 0 0 5px #635e5e;
+
+        }
+
+        @media (max-width: 768px) {
+            .product-card {
+                width: 100%;
+                border: 1px solid #e7dbdb;
+                padding: 4px;
+                margin-bottom: 5px;
+                display: flex;
+                align-items: center;
+                height: 150px;
+                border-radius: 5px;
+            }
+
+            .product-image img {
+                max-width: 100%;
+                /* Asegura que la imagen no exceda su contenedor */
+                height: 80px;
+    
+            }
+            .product-info>h6 {
+                font-size: 0.7em;
+            }
+
+            .product-price {
+                margin-top: 2px;
+   
+                color: #c0392b;
+                font-size: 0.7em;
+            }
+    
+            .part-link {
+                color: #0d2c41;
+                margin-top: 2px;
+                font-size: 0.7em;
+            }
+    
+            .product-price > del {
+                margin-top: 3px;
+                color: #7f8c8d;
+                font-size: 0.9em !important;
+            }
+
+            #add-to-cart, #please-call{
+                margin-bottom: 15px !important;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <!-- <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div> -->
+    <div id="preloader">
+        <div class="preloader">
+            <!-- Asegúrate de reemplazar 'ruta/a/tu/preloader.gif' con la ruta real a tu GIF -->
+            <img src="myassets/videos/loader.gif" alt="Cargando..." />
+        </div>
+    </div>
+    <!-- Start Header Area -->
+    <header class="header">
+        <!-- Header Top -->
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 align-self-center">
+                        <div class="logo d-mobile-none">
+                            <a href="index.html">
+                                <img src="myassets/img/logo.png" alt="logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <!-- Header Top Right -->
+                        <div class="header-top-right">
+                            <ul>
+                                <li class="call">
+                                    <i class="bi bi-telephone-inbound"></i>
+                                    <span>978-688-8280</span>
+                                </li>
+                                <li class="need-help">
+                                    <a href="#"><i class="bi bi-geo-alt"></i> 5 McFarlin Ct, Lawrence, MA 01841</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Bottom -->
+        <div class="header-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-10">
+                        <!-- Logo -->
+                        <div class="logo mobile-bar-logo">
+                            <a href="index.html">
+                                <img src="myassets/img/logo.png" alt="img">
+                            </a>
+                        </div>
+                        <div class="mobile-bar">
+                            <div class="canvas_open">
+                                <a href="javascript:void(0)">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menu">
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li class="menu-item-has-children">
+                                        <a href="#">Category</a>
+                                        <ul>
+                                            <li><a href="bodyparts.html">Body Parts</a></li>
+                                            <li><a href="saleparts.html">Sale Old Parts</a></li>
+                                            <li><a href="mufflers.html">Mufflers</a></li>
+                                            <li><a href="paintsupplies.html">Painting Supplies</a></li>
+                                            <li><a href="paint.html">Paint Center</a></li>
+                                            <li><a href="ourproducts.html">Our Products</a></li>
+                                            <li><a href="gallery.html">Gallery</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu-area">
+
+        <div class="offcanvas_menu">
+            <div class="offcanvas_menu_wrapper">
+                <div class="canvas_close">
+                    <a href="javascript:void(0)"><i class="fas fa-times"></i></a>
+                </div>
+                <div class="mobile-logo">
+                    <a href="index.html">
+                        <img src="myassets/img/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div id="menu" class="text-left ">
+                    <ul class="offcanvas_main_menu">
+                        <li class="menu-item-has-children active">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="about.html"> About Us</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#">Category</a>
+                            <ul class="sub-menu">
+                                <li><a href="bodyparts.html">Body Parts</a></li>
+                                <li><a href="saleparts.html">Sale Old Parts</a></li>
+                                <li><a href="mufflers.html">Mufflers</a></li>
+                                <li><a href="paintsupplies.html">Painting Supplies</a></li>
+                                <li><a href="paint.html">Paint Center</a></li>
+                                <li><a href="ourproducts.html">Our Products</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="contact.html"> Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--offcanvas menu area end-->
+    <!-- End Header Area -->
+    <div class="off_canvars_overlay">
+
+    </div>
+
+
+    <!-- Start Breadcrumb Area -->
+    <section class="breadcrumb-area pt-120 pb-120" style="background-image:url('myassets/img/part_header_3.png');">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-content">
+                        <h2></h2>
+                        <ul>
+                            <li><a href="index.html"></a></li>
+                            <li><i class="fas fa-angle-double-right"></i></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Breadcrumb Area -->
+
+    <!-- Start Shop Page -->
+    <section class="section-padding">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-headding text-center  mb-50">
+                    <h2><span>Find Your Body Part</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="container main-container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 mb-30 search-widget">
+                        <h2 class="search-widget-title">START HERE</h2>
+                        <p class="search-widget-desc">Select your vehicle’s year, make and model</p>
+                        <div class="form-group">
+                            <select id="carYears" class="form-control custom-select">
+                                <!-- Las opciones se llenarán aquí con AJAX -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select id="carMakes" class="form-control custom-select">
+                                <!-- Las opciones estáticas o llenadas con AJAX -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select id="carModels" class="form-control custom-select">
+                                <!-- Las opciones se llenarán aquí con AJAX -->
+                            </select>
+                        </div>
+
+                        <div class="search-widget-buttons">
+                            <button id="btn_find" type="button" class="btn find-button">FIND</button>
+                            <button id="btn_reset" type="button" class="btn reset-button">RESET</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-9 mb-30">
+                        <div id="parts-list" class="container product-list">
+
+
+                            <!-- Replicate the above div as needed for each product -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </section>
+    <!-- End Shop Page -->
+
+
+
+
+    <!-- Start Call Now Section -->
+    <section class="call-now pt-120 pb-120" style="background-image:url('myassets/img/call-bg.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="call-now-content">
+                        <h4>any question you have</h4>
+                        <h2>978-688-8280</h2>
+
+                        <span style="margin-right: 10px;"><a href="#"><i class="fab fa-facebook-f"
+                                    style="font-size: 32px;"></i></a></span>
+                        <span style="margin-right: 10px;"><a href="#"><i class="fab fa-twitter"
+                                    style="font-size: 32px;"></i></a></span>
+                        <span style="margin-right: 10px;"><a href="#"><i class="fab fa-pinterest-p"
+                                    style="font-size: 32px;"></i></a></span>
+                        <span style="margin-right: 10px;"><a href="#"><i class="fab fa-instagram"
+                                    style="font-size: 32px;"></i></a></span>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- End Call Now Section -->
+
+
+    <!-- Start Subscribe Form -->
+    <section class="subscribe-form pt-70 pb-20">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="subscribe-left mb-50">
+                        <div class="img">
+                            <img src="myassets/img/logo.png" alt="logo">
+                        </div>
+                        <div class="content">
+                            <h2>About Us</h2>
+                            <p>Rev Up Your Ride with Quality Solutions!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="subscribe-form">
+                        <form action="#">
+                            <input type="email" name="sub" placeholder="Enter Your Email Address">
+                            <button type="submit">send email</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- End Quick View Modal Content -->
+    <div class="scroll-area">
+        <i class="fa fa-angle-up"></i>
+    </div>
+
+
+
+    <!-- Js File -->
+    <script src="myassets/js/modernizr.min.js"></script>
+    <script src="myassets/js/jquery-3.5.1.min.js"></script>
+    <script src="myassets/js/popper.min.js"></script>
+    <script src="myassets/js/bootstrap.min.js"></script>
+    <script src="myassets/js/owl.carousel.min.js"></script>
+    <script src="myassets/js/jquery.nice-select.min.js"></script>
+    <script src="myassets/js/jquery.magnific-popup.min.js"></script>
+    <script src="myassets/js/wow.min.js"></script>
+    <script src="myassets/js/ajax-form.js"></script>
+    <script src="myassets/js/mobile-menu.js"></script>
+    <script src="myassets/js/script.js"></script>
+
+
+
+
+</body>
+
+</html>
